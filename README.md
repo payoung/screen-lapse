@@ -14,3 +14,7 @@ Requirements
 This is a small project, so I am not goint to use virtualenv or a requreiments.txt file
 - gnome-screenshot: if you dont have this already <code>sudo apt-get install gnome-screenshot</code>
 - apscheduler: <code>sudo pip install apscheduler</code>
+
+Setup Instructions
+=====================
+At the moment it is pretty bare bones.  The gnome-screenshot utility does not provide the opption to pass in a file path at the command line.  So in order to supress the prompt for a save location, you need to set a default file path using something like the CompzigConfig Settings Manager. At the moment, the script will take a screenshot once a minute.  I am looking in to providing some more save options.
