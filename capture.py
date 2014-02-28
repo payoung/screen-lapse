@@ -21,7 +21,7 @@ img_cnt = 1
 @sched.interval_schedule(minutes=1)
 def run_capture():
     fp = "tmp/img_" + datetime.datetime.now().strftime("%s") + ".png"
-    cmd = "scrot " + fp
+    cmd = "scrot -z " + fp
     os.system(cmd)
     print "Screen shot taken -", fp
 
