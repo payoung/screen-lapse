@@ -16,10 +16,14 @@ an input path is) then create a default path
 """
 
 sched = Scheduler()
+img_cnt = 1
 
 @sched.interval_schedule(minutes=1)
 def run_capture():
-    os.system("gnome-screenshot")
+    fp = "tmp/img_" + datetime.datetime.now().strftime("%s") + ".png"
+    cmd = "scrot " + fp
+    os.system(cmd)
+    print "Screen shot taken -", fp
 
 sched.start()
 
